@@ -1,2 +1,2 @@
-# Ariketak_Serbitzuak
-Serbitzu eta Prozesuen Programazioa (2024-2025)
+# Ariketak_Zerbitzuak
+Zerbitzu eta Prozesuen Programazioa (2024-2025)
