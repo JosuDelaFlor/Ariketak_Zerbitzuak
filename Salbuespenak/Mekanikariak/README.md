@@ -1,18 +1,21 @@
-## Getting Started
+## Salbuespenak, interfazeak eta herentzia
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### MekanikariaException.java
+* Gure salbuespen bat sortuko dugu (extends Exception).
+* ErroreLaburra, erroreGaratua eta erroreData (java.util.Date erakoa) izango ditu ezaugarri moduan.
 
-## Folder Structure
+### IMekanikaria.java
+* Interfaze bat sortuko dugu IMekanikaria izenekoa. Ondorengo metodoak izango ditu:
+    - void autoaKonpondu();
+    - int kobratu();
+    - void biharEtorri();
 
-The workspace contains two folders by default, where:
+### HodeiMekanikaria.java
+* Klase bat sortuko dugu "IMekanikaria" interfazea inplementatuko duena.
+* AutoaKonpondu() metodoan salbuespen bat botako du. Salbuespenean errore laburrak, errore garatua eta gertakizunaren data agertuko dira.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Main.java
+* Metodo nagusia izango duen klasea sortuko dugu.
+* HodeiMekanikaria instantzia bat erabiliko dugu eta autoa konpontzeko eskatuko diogu.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
