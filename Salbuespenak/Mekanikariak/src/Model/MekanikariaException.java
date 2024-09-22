@@ -6,11 +6,11 @@ public class MekanikariaException extends Exception {
     private String erroreLaburra, erroreGaratua;
     private Date erroreData;
 
-    public MekanikariaException(String erroreLaburra, String erroreGaratua, Date erroreData) {
+    public MekanikariaException(String erroreLaburra, String erroreGaratua) {
         super(erroreLaburra);
         this.erroreLaburra = erroreLaburra;
         this.erroreGaratua = erroreGaratua;
-        this.erroreData = erroreData;
+        this.erroreData = new Date();
     }
 
     public String getErroreLaburra() {
