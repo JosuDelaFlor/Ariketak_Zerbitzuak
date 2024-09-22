@@ -8,7 +8,7 @@ public class HodeiMekanikaria implements IMekanikariak {
     @Override
     public void autoaKonpondu() throws MekanikariaException {
         throw new MekanikariaException("Konponketa huts egin du",
-            "Motodda aldatu behar da",
+            "Motorra aldatu behar da",
             new Date());
     }
 
