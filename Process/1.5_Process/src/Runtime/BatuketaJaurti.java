@@ -1,12 +1,18 @@
+package Runtime;
+
 import java.io.IOException;
 
 public class BatuketaJaurti {
+	/**
+	 * Prozesua Runtime Erabilita
+	 * @param args
+	 */
     public static void main(String[] args) {
-        ProcessBuilder pb;
-		pb = new ProcessBuilder("java.exe", "src\\Batuketa", "76", "2");
+        Runtime runtime = Runtime.getRuntime();
 		System.out.println("BatuketaJaurtiMain: BatuketaMain prozesua SORTU dut.");
+		String[] command = {"java", "src\\Batuketa", "13", "13"};
 		try {
-			Process p = pb.start();
+			Process p = runtime.exec(command);
 			System.out.println("BatuketaJaurtiMain: BatuketaMain prozesua JAURTI dut.");
 			p.waitFor();
 			System.out.println("BatuketaJaurtiMain: BatuketaMain prozesua BUKATU da.");
