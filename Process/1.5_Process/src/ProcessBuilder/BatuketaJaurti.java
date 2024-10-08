@@ -8,7 +8,7 @@ public class BatuketaJaurti {
 	 */
     public static void main(String[] args) {
         ProcessBuilder pb;
-		pb = new ProcessBuilder("java.exe", "ProcessBuilder/Batuketa", "76", "2");
+		pb = new ProcessBuilder("java.exe", "bin.Batuketa.class", "76", "2");
 		System.out.println("BatuketaJaurtiMain: BatuketaMain prozesua SORTU dut.");
 		try {
 			Process p = pb.start();
