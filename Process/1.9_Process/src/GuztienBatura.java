@@ -28,10 +28,10 @@ class FileReaderTask implements Runnable {
     @Override
     public void run() {
         try {
-            // String[] cmd = {"CMD", "/C", "type", filePath};
-            // Process process = Runtime.getRuntime().exec(cmd);
+            String[] cmd = {"CMD", "/C", "type", filePath};
+            Process process = Runtime.getRuntime().exec(cmd);
 
-            BufferedReader reader = new BufferedReader(new FileReader(filePath));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line;
             Pattern pattern = Pattern.compile("\\d+");
             List<Integer> numbers = new ArrayList<>();
@@ -54,7 +54,7 @@ class FileReaderTask implements Runnable {
             };
 
             int sum = innerGuztienBatura.sum(numbers);
-            String filename = filePath.substring(4, filePath.lastIndexOf("."));
+            String filename = filePath.substring(10, filePath.lastIndexOf("."));
             System.out.println(filename+": "+sum);
         } catch (Exception e) {
             e.printStackTrace();
